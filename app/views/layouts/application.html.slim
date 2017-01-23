@@ -1,0 +1,26 @@
+doctype html
+html
+  = render 'partials/header'
+  body
+    #page-loader
+      span.page-loader-gif
+    #main-nav class="navbar navbar-fixed-top"
+      .container
+        .navbar-header
+          button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav"
+            span.icon-bar
+          a.navbar-brand.scrollto Home
+        
+        #site-nav class="navbar-collapse collapse"
+          ul.nav.navbar-nav.navbar-right
+            li
+              <a href="#about" class="scrollto"><i class="fa fa-graduation-cap"></i>Profile</a>
+            li
+              <a href="#services" class="scrollto"><i class="fa fa-cog"></i>Specialties</a>   
+            li
+              <a href="#portfolio" class="scrollto"><i class="fa fa-briefcase"></i>Projects</a>
+            li
+              <a href="#contact" class="scrollto"><i class="fa fa-envelope"></i>Contact</a>
+
+        = yield
+
