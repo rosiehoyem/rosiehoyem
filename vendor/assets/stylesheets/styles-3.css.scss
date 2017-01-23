@@ -232,7 +232,7 @@ hr{
 	top:50%;
 	left:50%;
 	margin:-32px 0 0 -32px;
-	background: url('../images/preloader.gif') no-repeat;
+	background: url(asset-path("preloader.gif")) no-repeat;
 }
 
 /*------------------
@@ -944,7 +944,7 @@ hr{
 }
 
 #project-viewer-content .project-media.video-container{
-	background: url(../images/video-loader.gif) center center no-repeat;
+	background: url(asset-path("video-loader.gif")) center center no-repeat;
 	background-color: #000;
 }
 

@@ -1,2 +1,133 @@
-h1 Projects#benson
-p Find me in app/views/projects/benson.html.slim
+header
+  .container
+    .row
+      .col-md-12
+        br
+        br
+        br
+        br
+        h1 Benson
+
+        h3 Problem Statement
+        p WomenTechWomenYes (WTWY) wants to leverage data to optimize recruitment efforts at subway stations for an upcoming event. They would like to target specifically women in tech industries.
+
+        h3 Assumptions
+        ul
+          li Traffic /= entries + exits
+          li Gala is being held early June, thus subway data from May 2016 (4 weeks)
+          li Target participant/contributor is a woman working in the tech industry
+          li Further assume target demographic will use subway stations near their place of residence; not considering major commute stations  as commuters would be less likely to attend the Gala
+
+        p A census tract, census area, census district or meshblock is a geographic region defined for the purpose of taking a census. Usually these coincide with the limits of cities, towns or other administrative areas and several tracts commonly exist within a county.
+
+        p We are using Census Data that tracks people where they live.
+
+        p We used the XXX classifications.
+
+        h3 Our Approach
+        p Locate high density residential areas for women working in tech industries (US census data)
+        Merge the subways stops (City of New York dataset) on the Census data in ArcGIS.
+        Use MTA data (May 2016) to determine which stops near these locations are the most popular and when to hit those stops
+
+        h3 Cleaning the Data
+
+        p To gain insights about the population living and working around each station, we pulled some demographic data from the US Census Bureau..
+
+        h4 Turnstile Data
+
+        p The turnstile data was available for easy download from the City of New York. It is released weekly with readings from each turnstile machine in the 359 stations across the city in 4 hour incredments. The entry and exist totals are provided as running totals. To extract insights from this data, first we had to calculate the differences for each entry, then group them by station.
+
+        h4 Census Data
+
+        p To identify a geographic location for each station, we pulled a shapefile of all subway stops from the City of New York. In ArcGIS, we overlayed the geographic location of the stations on tract level data pulling out the number of women working in STEM fields from this immediate area. Merging these layers allowed us to identify the census tract location of each suway station.
+
+        h3 Finding our Target Stations
+
+        p Using the turnstile data we were able to identify the top 20 busiest stations. 
+    .row
+      .col-md-12
+        .hpanel
+          .panel-heading
+            Top Ranked Stations by Total Volume
+          .panel-body
+            = image_tag("benson_stations_gt_100.png")
+
+    p Using the census data we pulled out the top stations serving women working in STEM fields. 
+
+    .row
+      .col-md-12
+        .hpanel
+          .panel-heading
+            Top Ranked Stations by Total Volume
+          .panel-body
+            = image_tag("benson_stations_gt_100.png")
+
+    h3 Bringing the data together
+
+    .row
+      .col-md-12
+        .hpanel
+          .panel-heading
+            Top Ranked Stations by Total Volume
+          .panel-body
+            = image_tag("benson_census_ts_scatterplot_draft.png")
+
+    p To determine the best stations, we weighted these two factors equally and took the combined highest rank stations
+
+    .row
+      .col-md-12
+        .hpanel
+          .panel-heading
+            Top Ranked Stations by Total Volume
+          .panel-body
+            table.table.table-bordered.table-striped
+              thead
+                tr
+                  th Rank
+                  th Station Name
+                  th Borough
+              tbody
+
+    .row
+      .col-md-12
+        .hpanel
+          .panel-heading
+            h3 Top Ranked Stations by Female Residents Working in STEM Fields
+          .panel-body
+            table.table.table-bordered.table-striped
+              thead
+                tr
+                  th Rank
+                  th Station Name
+                  th Borough
+              tbody
+
+    h3 Final Reccommendatioans
+
+    .row
+      .col-md-12
+        .hpanel
+          .panel-heading
+            h3 Projects
+          .panel-body
+            table.table.table-bordered.table-striped
+              thead
+                tr
+                  th Rank
+                  th Station Name
+                  th Borough
+              tbody
+
+
+    h3 Lessons Learned
+
+    p Many of the subway stops landed on or near the border of census tracts. The next pass of this analysis would be to create a buffer zone around the subways stops.
+    .row
+      .col-md-12
+        .hpanel
+          .panel-heading
+            Example of Station Buffer Analysis
+          .panel-body
+            = image_tag("benson_subway_buffer.png")
+
+

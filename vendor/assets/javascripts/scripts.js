@@ -214,46 +214,46 @@ $(document).ready(function(){
 	/*============================================
 	Tweets
 	==============================================*/
-	$('#twitter-slider').flexslider({
-		slideshowSpeed: 5000,
-		useCSS: true,
-		directionNav: false, 
-		pauseOnAction: false, 
-		pauseOnHover: true,
-		smoothHeight: false
-	});
+	// $('#twitter-slider').flexslider({
+	// 	slideshowSpeed: 5000,
+	// 	useCSS: true,
+	// 	directionNav: false, 
+	// 	pauseOnAction: false, 
+	// 	pauseOnHover: true,
+	// 	smoothHeight: false
+	// });
 	
 	/*============================================
 	Twitter
 	==============================================*/
-	var maxTweets = $('#twitter-slider').data('max-tweets'),
-		widgetID = $('#twitter-slider').data('widget-id');
+	// var maxTweets = $('#twitter-slider').data('max-tweets'),
+	// 	widgetID = $('#twitter-slider').data('widget-id');
 	
-	twitterFetcher.fetch(widgetID, 'twitter-slider', maxTweets, true, false, true, '', false, handleTweets, false);
+	// twitterFetcher.fetch(widgetID, 'twitter-slider', maxTweets, true, false, true, '', false, handleTweets, false);
 
-	function handleTweets(tweets){
+	// function handleTweets(tweets){
 	
-		var x = tweets.length,
-			n = 0,
-			tweetsHtml = '<ul class="slides">';
+	// 	var x = tweets.length,
+	// 		n = 0,
+	// 		tweetsHtml = '<ul class="slides">';
 			
-		while(n < x) {
-			tweetsHtml += '<li>' + tweets[n] + '</li>';
-			n++;
-		}
+	// 	while(n < x) {
+	// 		tweetsHtml += '<li>' + tweets[n] + '</li>';
+	// 		n++;
+	// 	}
 		
-		tweetsHtml += '</ul>';
-		$('#twitter-slider').html(tweetsHtml);
+	// 	tweetsHtml += '</ul>';
+	// 	$('#twitter-slider').html(tweetsHtml);
 	
-		$('#twitter-slider').flexslider({
-			slideshowSpeed: 5000,
-			useCSS: true,
-			directionNav: false, 
-			pauseOnAction: false, 
-			pauseOnHover: true,
-			smoothHeight: false
-		});
-	}
+	// 	$('#twitter-slider').flexslider({
+	// 		slideshowSpeed: 5000,
+	// 		useCSS: true,
+	// 		directionNav: false, 
+	// 		pauseOnAction: false, 
+	// 		pauseOnHover: true,
+	// 		smoothHeight: false
+	// 	});
+	// }
 	/*============================================
 	Testimonials
 	==============================================*/
@@ -279,9 +279,9 @@ $(document).ready(function(){
 	/*============================================
 	Placeholder Detection
 	==============================================*/
-	if (!Modernizr.input.placeholder) {
-		$('#contact-form').addClass('no-placeholder');
-	}
+	// if (!Modernizr.input.placeholder) {
+	// 	$('#contact-form').addClass('no-placeholder');
+	// }
 	
 	/*============================================
 	Tooltips
