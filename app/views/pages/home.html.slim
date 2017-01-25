@@ -5,7 +5,7 @@ header id="home"
       
         h1.scrollimation.fade-down.d1 Hello World.
         h2.scrollimation.fade-down.d3
-          <span class="main-color">D</span>eveloper, <span class="main-color">O</span>rganizer, <span class="main-color">C</span>atalyst
+          <span class="main-color">D</span>eveloper, <span class="main-color">D</span>ata Scientist, <span class="main-color">C</span>atalyst
     .header-img.scrollimation.fade-up.d1
       img.img-responsive
         = image_tag("header-img.png")
@@ -28,7 +28,7 @@ header id="home"
           h2.scrollimation.fade-left Rosie Hoyem
           h3.scrollimation.fade-left Love Bird Tamer
         
-          p.margin-top scrollimation fade-right">Urban #planner turned #energy policy wonk turned #Rails developer. Currently writing code at <a href="http://livefront.com/">Livefront</a>. Proud graduate of the <a href="http://flatironschool.com/li">FlatironSchool</a>.
+          p.margin-top.scrollimation.fade-right Urban #planner turned #energy policy wonk turned #Rails developer. Proud graduate of the <a href="http://flatironschool.com/li">FlatironSchool</a> and currently attending <a href="http://www.thisismetis.com/data-science-bootcamps/li">Metis</a> for data science.
           
   section id="services" class="big-padding"
     .container
@@ -43,110 +43,64 @@ header id="home"
       .tab-content
         .row.tab-pane.active id="development"
           .col-sm-4.service-item.scrollimation.fade-left
-            .service-icon
-              <i class="fa fa-github">   
+            .service-icon =icon("github")  
             h3 I write code.
             p I build a lot of things using Ruby on Rails. I also speak Javascript.
             
           .col-sm-4.service-item.scrollimation.fade-left
-          
-            .service-icon 
-              <i class="fa fa-html5">
-            
+            .service-icon =icon("html5")
             h3 I build things for the web.
-            
             p My work lives on the web.
-             
-          .col-sm-4.service-item.scrollimation.fade-left
           
-            .service-icon 
-              <i class="fa fa-mobile"></
-            
+          .col-sm-4.service-item.scrollimation.fade-left
+            .service-icon =icon("mobile")
             h3 I love mobile apps.
-            
             p I currently write a lot of backend services for mobile apps.
         
         .row.tab-pane id="project-mgmt"
-        
           .col-sm-4.service-item
-          
-            .service-icon 
-              <i class="fa fa-list">
-            
+            .service-icon =icon("list")
             h3 Work Plans
-            
             p I'm a PMI trained project manager and love nerding out planning projects.
             
           .col-sm-4.service-item
-          
-            .service-icon 
-              <i class="fa fa-line-chart">
-            
+            .service-icon =icon("line-chart")
             h3 Metrics
-            
             p What gets measured gets managed. I also like metrics.
           
           .col-sm-4.service-item
-          
-            .service-icon 
-              <i class="fa fa-dollar">
-            
+            .service-icon =icon("dollar")
             h3 Budgets
-            
             p Getting stuff done and within budget. Oh yeah.
             
-        .row tab-pane" id="catalyst"
-        
+        .row.tab-pane id="catalyst"
           .col-sm-4.service-item
-          
-            .service-icon 
-              <i class="fa fa-file-text">
-            
+            .service-icon =icon("file-text")
             h3 I Write.
-            
             p I have ideas and I like to share them.
-        
-          .col-sm-4.service-item
           
-            .service-icon 
-              <i class="fa fa-plug">
-            
+          .col-sm-4.service-item
+            .service-icon =icon("plug")
             h3 I participate.
-            
             p Meetups, hackethons, and startup events, oh my! I also like people.
         
           .col-sm-4.service-item
-          
-            .service-icon 
-              <i class="fa fa-refresh">
-            
+            .service-icon =icon("refresh")
             h3 I rethink the usual.
-            
             p Technology drives change in remarkable ways and creates opportunities to reinvent everything. This is why I'm here.
     
-  <!-- CALL TO ACTION -->
   section id="cta1" class="bg-main-color cta"
-  
     .container.text-center.scrollimation.fade-up
-    
-      p Currently, I help companies design and build remarkable mobile experiences at Livefront.
-      
-      <a class="btn btn-dc btn-white scrollto" <a href="http://livefront.com/">Visit their site.</a>
+      p Currently, I'm attending the <a href="http://www.thisismetis.com/data-science-bootcamps/li">Metis bootcamp</a> for data science.
     
   <!--LATEST PROJECTS -->
   
   section id="portfolio" class="big-padding gray-bg"
-  
     .container
-      
-      h1.section-title">Latest Side Projects<span class="main-color">3</span>
-    
+      h1.section-title Latest Side Projects<span class="main-color">3</span>
       .row
-      
         .col-sm-5.push-down.scrollimation.fade-right
-        
           h2.row-title Our City
-          
           p Our City is an on-going initiative that aims to facilitate transparency into the governing process of the Minneapolis City Council and increase public engagement through greater access to decision makers and a better understanding of decision making processes. The project got it's start in the summer of 2014 with the <a href="http://www.cura-tech.org/">CURA:Tech</a> program, and has continued as a side-project of mine and through efforts of other members of <a href="http://opentwincities.org/">Open Twin Cities</a>
 
           p Learn more about this project on this site which gathers together a of the different prototypes that have come from this initiative.
@@ -158,101 +112,88 @@ header id="home"
             =image_tag("our-city-home.png") 
         
       hr
-    
       .row
-      
-        .col-sm-6 col-sm-push-6 push-down scrollimation fade-left">
+        .col-sm-6.col-sm-push-6.push-down.scrollimation.fade-left
         
-          h2.row-title">The Interactive City</h2>
-          
+          h2.row-title The Interactive City
           p This is a new project of mine that I will be launching later this summer. 
-        
           p More details to come!
-        
           p <a class="btn btn-dc btn-small btn-main-color" href="#link">Visit Website</a>
       
-        .col-sm-6 col-sm-pull-6 scrollimation fade-right">
+        .col-sm-6 col-sm-pull-6.scrollimation.fade-right
           = image_tag("interactive-city-featured.png", class: "img-responsive")
     
   <!-- PORTFOLIO -->
-  <section class="big-padding" >
-  
+  section.big-padding
     .container
-    
-      h1.section-title">Participate</h1>
-      p.subtitle">Conferences, Hackethons, Community Activities
+      h1.section-title Participate 
+      p.subtitle Conferences, Hackethons, Community Activities
       
       <!--==== Portfolio Filters ====-->
     
-    .container scrollimation fade-up">
-  
-      #projects-container" class="row">
+    .container.scrollimation.fade-up
+      #projects-container class="row"
       
         <!-- SINGLE PROJECT ITEM -->
         
-        <a class="project-item col-sm-6 col-md-4 col-lg-3 web">
-          
-          <img class="img-responsive project-image" src="assets/images/projects/build-the-api-first.jpg"  alt="Build the API First">
+        a.project-item.col-sm-6.col-md-4.col-lg-3.web
+          =image_tag "build-the-api-first.jpg", alt: "Build the API First", class: "img-responsive project-image"
           
           .hover-title
             h2.project-title Rails Conf, 2014
             p Presenter
         
-        <a class="project-item col-sm-6 col-md-4 col-lg-3 web">
-          
-          <img class="img-responsive project-image" src="assets/images/projects/startup-bus.jpg"  alt="Startup Bus">
+        a.project-item.col-sm-6.col-md-4.col-lg-3.web
+          =image_tag "startup-bus.jpg", alt: "Startup Bus", class: "img-responsive project-image" 
           
           .hover-title
             h2.project-title Startup Bus Southeast
             p Buspreneur
         
-        <a class="project-item col-sm-6 col-md-4 col-lg-3 web">
-          
-          <img class="img-responsive project-image" src="assets/images/projects/railsbridge-logo.jpg"  alt="RailsBridge">
+        a.project-item.col-sm-6.col-md-4.col-lg-3.web">
+          =image_tag "railsbridge-logo.jpg", alt: "RailsBridge", class: "img-responsive project-image" 
           
           .hover-title
             h2.project-title RailsBridge
             p Workshop Organizer
         
-        <a class="project-item col-sm-6 col-md-4 col-lg-3 web">
-          
-          <img class="img-responsive project-image" src="assets/images/projects/hack-the-gap.jpg"  alt="Hack the Gap">
+        a.project-item.col-sm-6.col-md-4.col-lg-3.web
+          =image_tag "hack-the-gap.jpg", alt: "Hack the Gap", class: "img-responsive project-image"
           
           .hover-title
             h2.project-title Hack the Gap
             p Participant
   
   <!-- CONTACT -->
-  <section id="contact" class="big-padding light-typo color-overlay">
+  section id="contact" class="big-padding.light-typo.color-overlay"
   
     .container
-    
       h1.section-title Contact Me <span class="main-color">*</span>
-      
       .row
-      
         .col-sm-6.col-md-5.scrollimation.fade-right
-        
-          p.lead Interested in something I'm working on? <br/>Want to chat with me about something you're working on? <br/>Contact me. 
+          p.lead Interested in something I'm working on? 
+          br
+          Want to chat with me about something you're working on? 
+          br
+          Contact me. 
         
           p 
-            Rosie Hoyem<br/>
-            Minneapolis, MN<br/>
-          
-        
-          .social-links">
+            Rosie Hoyem
+            br
+            Minneapolis, MN
+            br
+
+          .social-links
             <a href="https://twitter.com/rhoyem"><i class="fa fa-fw fa-twitter"></i></a>    
             <a href="https://www.linkedin.com/in/rosiehoyem"><i class="fa fa-fw fa-linkedin-square"></i></a>
             <a href="https://instagram.com/rosiehoyem/"><i class="fa fa-fw fa-instagram"></i></a>
   
   footer id="main-footer"
-  
     .container    
       .row
         .col-sm-2
-        
           a.logo-link.scrollto 
-            <img class="img-responsive" src="" alt="" />
+            img.img-responsive src="" alt="" 
         .col-sm-8   
           nav
             ul.footer-nav

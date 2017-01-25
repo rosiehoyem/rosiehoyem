@@ -9,12 +9,12 @@ html
         .navbar-header
           button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav"
             span.icon-bar
-          a.navbar-brand.scrollto Home
+          = link_to "Home", root_path, class: "navbar-brand scrollto"
         
         #site-nav class="navbar-collapse collapse"
           ul.nav.navbar-nav.navbar-right
             li
-              <a href="#about" class="scrollto"><i class="fa fa-graduation-cap"></i>Profile</a>
+              =link_to icon("graduation-cap", "Profile"), root_path
             li
               <a href="#services" class="scrollto"><i class="fa fa-cog"></i>Specialties</a>   
             li
