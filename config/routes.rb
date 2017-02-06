@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   get 'projects/benson'
+  get 'projects/luther'
 
   root to: 'pages#home'
 

@@ -1,0 +1,101 @@
+header
+  .container
+    .row
+      .col-md-12
+        br
+        br
+        br
+        br
+        h1 Metis Project 2: Building Energy Benchmarking in Minneapolis
+        h3 Analyzing preliminary outcomes of Ordinance 47.190
+
+        .pull-right
+          = image_tag("luther_mpls_skyline", width: 500)
+          br
+          .pull-right
+            h5= link_to "Minneapolis", "#", target: "blank"
+        h3 Problem Statement
+        p This stated purpose of the ordinance is to allow building owners and the City to track energy and water usage year to year to determine opportunities for improvement, recognize high performers, and determine progress towards the City's Climate Action Plan goals.
+        ul
+          li 429 buildings
+          li 17% of city-wide greenhouse gas emissions
+
+        p This policy is a significant investment of time by the city to manage and enforce the ordinance, not to mention the time and potentially investment in new building technologies that it takes for participants to comply. Minneapolis is a progressive city with strong environmental policies and aggressive climate goals. Though this policy does not specify any specific strategies for lowering emissions, through disclosure the city hopes the dial towards greener buildings will bemoved. The old maxim of what gets measured gets managed is at work here. 
+
+        .well
+          h3 Problem Statement
+          p Look for patterns in the data to determine opportunities for improvement that will inform future policy towards the goal of reducing greenhouse gas emissions.
+   
+        p Buildings that are affected:
+        ul
+          li City of Minneapolis 
+          li Public and private buildings
+          li Buildings containing at least 50,000 gross square feet
+          li Buildings NOT classified as residential or industrial use
+
+        hr
+        h3 Tapping into Public Data
+        ul
+          li Ordinance reports from the City (downloadable CSV)
+          li Property Info from the County website (scraped pages)
+          li Parcel information from the County (geo dataset)
+
+
+        .panel
+          .panel-body
+            .pull-right
+              = image_tag("luther_energy_star_score.png")
+              br
+              .pull-right
+                h5= link_to "More info about Energy Star Scores", "#", target: "blank"
+
+            h4 Ordinance Result Reports
+            p As part of the Ordinance, <a href="http://www.ci.minneapolis.mn.us/environment/energy/benchmarking" target="blank">yearly reports of building performance</a> are released to the public on the City of Minneapolis website. There are currently 2 years of raw data (2014, 2015) and two additional years with summar reports (2012-2015). As of the the writing of this post, the data from 2016 had not yet been released. The raw data provides statistics on ~250 public and ~250 private buildings. The data is unfortunately non-standardized, with the datasets varying from year to year and between the public and private files. The raw data contains a number of metrics that go into calculating the Energy Star Score and, of course, the Energy Star Score for those buildings that it could be calculated. 
+
+        .panel
+          .panel-body
+            .pull-right
+              = image_tag("luther_parcels.png")
+              br
+              .pull-right
+                h5= link_to "More info about Energy Star Scores", "#", target: "blank"
+
+            h4 Hennepin County Parcel Data
+            p Minneapolis is located completely within Hennepin County Extracted DBF from shapefile Binary Contains detailed information from the planning department
+
+        .panel
+          .panel-body
+            .pull-right
+              = image_tag("luther_property_search.png", width: 300)
+              br
+              .pull-right
+                h5= link_to "Hennepin County Property Search", "#", target: "blank"
+
+            h4 Hennepin County Property Info
+            p Covers every property in the CountyOnline public resource including tax valuations, ownership history, and the full building permit history Multiple properties listed under a address
+
+            p There were several challenges that emerged with this process. For one, addresses were not formated correctly for to be plugged into the search fields. This required some heavy-handed string manipulation. Also, many of the addresses are associated with more than one, and sometimes up to 100 property IDs. To complicate things even further, there emerged many different iterations of the property info page requiring smart logic to decifer which layout a property page was using and multiple iterations of the scraping script. Even after accounting for all of these factors, the search process was imperfect with only about ~ 80% success rate.
+        .panel
+          .panel-body
+        
+            h3 Selecting Variables and Creating the Model
+
+            .pull-right
+              = image_tag("luther_data_join.png", width: 500)
+              br
+              .pull-right
+                h5 Joining 3 data sources on common keys
+
+        .panel
+          .panel-body
+            h3 Next Steps 
+            p There are several things I would like to do as next steps:
+            ul
+              li Revisit cleaning the data
+              li Continue transforming non-normal variables
+              li Refine the model
+              li Revisit the features I threw out
+              li Get more data (owner info)
+              li Set-up some interviews
+
+
