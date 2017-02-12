@@ -9,19 +9,18 @@ html
         .navbar-header
           button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav"
             span.icon-bar
-          = link_to "Home", root_path, class: "navbar-brand scrollto"
+          = link_to "Home", root_path, class: "navbar-brand"
         
         #site-nav class="navbar-collapse collapse"
           ul.nav.navbar-nav.navbar-right
             li
               =link_to icon("graduation-cap", "Profile"), root_path
             li
-              <a href="#services" class="scrollto"><i class="fa fa-cog"></i>Specialties</a>   
+              <a href="#specialties" class="scrollto"><i class="fa fa-cog"></i>Specialties</a>   
             li
               <a href="#portfolio" class="scrollto"><i class="fa fa-briefcase"></i>Projects</a>
             li
               <a href="#contact" class="scrollto"><i class="fa fa-envelope"></i>Contact</a>
 
-    .container
-      = yield
+    = yield
 

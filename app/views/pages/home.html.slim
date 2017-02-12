@@ -5,7 +5,7 @@ header id="home"
       
         h1.scrollimation.fade-down.d1 Hello World.
         h2.scrollimation.fade-down.d3
-          <span class="main-color">D</span>eveloper, <span class="main-color">D</span>ata Scientist, <span class="main-color">C</span>atalyst
+          <span class="main-color">D</span>ata Scientist, <span class="main-color">D</span>eveloper, <span class="main-color">C</span>atalyst
     .header-img.scrollimation.fade-up.d1
       img.img-responsive
         = image_tag("header-img.png")
@@ -30,18 +30,33 @@ header id="home"
         
           p.margin-top.scrollimation.fade-right Urban #planner turned #energy policy wonk turned #Rails developer. Proud graduate of the <a href="http://flatironschool.com/li">FlatironSchool</a> and currently attending <a href="http://www.thisismetis.com/data-science-bootcamps/li">Metis</a> for data science.
           
-  section id="services" class="big-padding"
+  section id="specialties" class="big-padding"
     .container
       
       h1.section-title Things I Do <span class="main-color">2</span>
       
       .text-center
         .btn-group
-          <button type="button" href="#development" class="btn btn-default toggle-tabs active">Development</button>
-          <button type="button" href="#project-mgmt" class="btn btn-default toggle-tabs">Project Management</button>
-          <button type="button" href="#catalyst" class="btn btn-default toggle-tabs">Catalyst</button>
+          <button type="button" href="#data-science" class="btn btn-default toggle-tabs active">Data Science</button>
+          <button type="button" href="#development" class="btn btn-default toggle-tabs">Development</button>
+          <button type="button" href="#product-mgmt" class="btn btn-default toggle-tabs">Product Management</button>
       .tab-content
-        .row.tab-pane.active id="development"
+        .row.tab-pane.active id="data-science"
+          .col-sm-4.service-item
+            .service-icon =icon("table")
+            h3 I build models.
+            p I'm a wiz with data. 
+          
+          .col-sm-4.service-item
+            .service-icon =icon("bar-chart")
+            h3 I create great data visualizations.
+            p D3.js, Chart.js, and mapping, oh my!
+        
+          .col-sm-4.service-item
+            .service-icon =icon("database")
+            h3 I manipulate databases like nobody's business.
+            p SQL? No problem. 
+        .row.tab-pane id="development"
           .col-sm-4.service-item.scrollimation.fade-left
             .service-icon =icon("github")  
             h3 I write code.
@@ -53,11 +68,11 @@ header id="home"
             p My work lives on the web.
           
           .col-sm-4.service-item.scrollimation.fade-left
-            .service-icon =icon("mobile")
-            h3 I love mobile apps.
-            p I currently write a lot of backend services for mobile apps.
+            .service-icon =icon("map")
+            h3 I make maps.
+            p I'm a GIS nerd and love all things spatial.
         
-        .row.tab-pane id="project-mgmt"
+        .row.tab-pane id="product-mgmt"
           .col-sm-4.service-item
             .service-icon =icon("list")
             h3 Work Plans
@@ -72,22 +87,6 @@ header id="home"
             .service-icon =icon("dollar")
             h3 Budgets
             p Getting stuff done and within budget. Oh yeah.
-            
-        .row.tab-pane id="catalyst"
-          .col-sm-4.service-item
-            .service-icon =icon("file-text")
-            h3 I Write.
-            p I have ideas and I like to share them.
-          
-          .col-sm-4.service-item
-            .service-icon =icon("plug")
-            h3 I participate.
-            p Meetups, hackethons, and startup events, oh my! I also like people.
-        
-          .col-sm-4.service-item
-            .service-icon =icon("refresh")
-            h3 I rethink the usual.
-            p Technology drives change in remarkable ways and creates opportunities to reinvent everything. This is why I'm here.
     
   section id="cta1" class="bg-main-color cta"
     .container.text-center.scrollimation.fade-up
@@ -109,19 +108,15 @@ header id="home"
         
         .col-sm-6.col-sm-offset-1.scrollimation.fade-left
           img.img-responsive
-            =image_tag("our-city-home.png") 
+            =image_tag("our-city-home.png", class: "img-responsive") 
         
       hr
       .row
         .col-sm-6.col-sm-push-6.push-down.scrollimation.fade-left
-        
-          h2.row-title The Interactive City
-          p This is a new project of mine that I will be launching later this summer. 
+          h2.row-title College Readiness in America
+          p Metis project in the works. 
           p More details to come!
-          p <a class="btn btn-dc btn-small btn-main-color" href="#link">Visit Website</a>
-      
-        .col-sm-6 col-sm-pull-6.scrollimation.fade-right
-          = image_tag("interactive-city-featured.png", class: "img-responsive")
+          p <a class="btn btn-dc btn-small btn-main-color" href="#link">Website Coming Soon</a>
     
   <!-- PORTFOLIO -->
   section.big-padding
@@ -150,7 +145,7 @@ header id="home"
             h2.project-title Startup Bus Southeast
             p Buspreneur
         
-        a.project-item.col-sm-6.col-md-4.col-lg-3.web">
+        a.project-item.col-sm-6.col-md-4.col-lg-3.web
           =image_tag "railsbridge-logo.jpg", alt: "RailsBridge", class: "img-responsive project-image" 
           
           .hover-title
@@ -172,16 +167,9 @@ header id="home"
       .row
         .col-sm-6.col-md-5.scrollimation.fade-right
           p.lead Interested in something I'm working on? 
-          br
-          Want to chat with me about something you're working on? 
-          br
-          Contact me. 
-        
-          p 
-            Rosie Hoyem
-            br
-            Minneapolis, MN
-            br
+          p.lead Want to chat with me about something you're working on? 
+          p.lead Contact me. 
+
 
           .social-links
             <a href="https://twitter.com/rhoyem"><i class="fa fa-fw fa-twitter"></i></a>    
@@ -200,15 +188,10 @@ header id="home"
               li
                 <a class="scrollto" href="#home">Home</a></li>
               li
-                <a class="scrollto" href="#services">Specialties</a></li>
+                <a class="scrollto" href="#specialties">Specialties</a></li>
               li
                 <a class="scrollto" href="#portfolio">Projects</a></li>
               li
-                <a class="scrollto" href="#contact">Contact</a></li>
-
-        .col-sm-2.text-right.social-links
+                <a class="scrollto" href="#contact">Contact</a></li>s
         
-          <a href="#" data-toggle="tooltip" title="Follow me on Twitter"><i class="fa fa-fw fa-twitter"></i></a>
-          <a href="#" data-toggle="tooltip" title="Follow me on Facebook"><i class="fa fa-fw fa-facebook"></i></a>
-          <a href="#" data-toggle="tooltip" title="Follow me on LinkedIn"><i class="fa fa-fw fa-linkedin"></i></a>
         
