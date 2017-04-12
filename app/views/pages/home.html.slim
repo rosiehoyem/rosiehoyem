@@ -28,7 +28,7 @@ header id="home"
           h2.scrollimation.fade-left Rosie Hoyem
           h3.scrollimation.fade-left Love Bird Tamer
         
-          p.margin-top.scrollimation.fade-right Urban #planner turned #energy policy wonk turned #Rails developer. Proud graduate of the <a href="http://flatironschool.com/li">FlatironSchool</a> and currently attending <a href="http://www.thisismetis.com/data-science-bootcamps/li">Metis</a> for data science.
+          p.margin-top.scrollimation.fade-right Urban #planner turned #energy policy wonk turned #Rails developer turned #data scientist. Proud graduate of the <a href="http://flatironschool.com/li">Flatiron School</a> and <a href="http://www.thisismetis.com/data-science-bootcamps/li">Metis</a> for data science.
           
   section id="specialties" class="big-padding"
     .container
@@ -38,7 +38,7 @@ header id="home"
       .text-center
         .btn-group
           <button type="button" href="#data-science" class="btn btn-default toggle-tabs active">Data Science</button>
-          <button type="button" href="#development" class="btn btn-default toggle-tabs">Development</button>
+          <button type="button" href="#development" class="btn btn-default toggle-tabs">Web Development</button>
           <button type="button" href="#product-mgmt" class="btn btn-default toggle-tabs">Product Management</button>
       .tab-content
         .row.tab-pane.active id="data-science"
@@ -55,7 +55,7 @@ header id="home"
           .col-sm-4.service-item
             .service-icon =icon("database")
             h3 I manipulate databases like nobody's business.
-            p SQL? No problem. 
+            p SQL? NoSQL? No problem. 
         .row.tab-pane id="development"
           .col-sm-4.service-item.scrollimation.fade-left
             .service-icon =icon("github")  
@@ -90,13 +90,40 @@ header id="home"
     
   section id="cta1" class="bg-main-color cta"
     .container.text-center.scrollimation.fade-up
-      p Currently, I'm attending the <a href="http://www.thisismetis.com/data-science-bootcamps/li">Metis bootcamp</a> for data science.
+      p I recently finished the Metis bootcamp for data science and am currently looking for new opportunities. <a href="http://www.thisismetis.com/data-science-bootcamps/li">Learn more.</a>
     
   <!--LATEST PROJECTS -->
   
   section id="portfolio" class="big-padding gray-bg"
     .container
-      h1.section-title Latest Side Projects<span class="main-color">3</span>
+      h1.section-title Latest Projects<span class="main-color">3</span>
+      .row
+        .col-sm-5.push-down.scrollimation.fade-right
+          h2.row-title Life Stream
+          p Life Stream is Quantifie Self data aggregator platform. I started working on this project as part of my final passion project at the <a href="http://www.thisismetis.com/">Metis Data Science Bootcamp</a> program. The goal of the platform was to automate pulling data from a variety of sources including Fitbit, Moves, Mint, and social media sites for example, aggregating it, and preparing it for analysis in near real-time.
+
+          p Learn more about this project on the intro page I built as part of my Metis Career Day presentation.
+        
+          p <a class="btn btn-dc btn-small btn-main-color" href="https://life-stream-intro.herokuapp.com/">Visit Website</a>
+        
+        .col-sm-6.col-sm-offset-1.scrollimation.fade-left
+          img.img-responsive
+            =image_tag("life-stream.jpg", class: "img-responsive") 
+        
+      hr
+      .row
+        .col-sm-6.col-sm-offset-1.scrollimation.fade-left
+          h2.row-title The Metis Experience
+          p This is series of blog posts and resources I put together as part of my participation in the Metis Data Science bootcamp. Here you'll find links to my projects, 'How To' guides I created, and my general thoughts on the program.
+
+          p I attended Metis from January to April of 2017.
+
+          p <a class="btn btn-dc btn-small btn-main-color" href="https://metis-experience.herokuapp.com/">Visit Blog</a>
+
+        .col-sm-5.push-down.scrollimation.fade-right
+          img.img-responsive
+            =image_tag("ds-experience.jpg", class: "img-responsive")
+      hr
       .row
         .col-sm-5.push-down.scrollimation.fade-right
           h2.row-title Our City
@@ -108,15 +135,7 @@ header id="home"
         
         .col-sm-6.col-sm-offset-1.scrollimation.fade-left
           img.img-responsive
-            =image_tag("our-city-home.png", class: "img-responsive") 
-        
-      hr
-      .row
-        .col-sm-6.col-sm-push-6.push-down.scrollimation.fade-left
-          h2.row-title College Readiness in America
-          p Metis project in the works. 
-          p More details to come!
-          p <a class="btn btn-dc btn-small btn-main-color" href="#link">Website Coming Soon</a>
+            =image_tag("our-city-home.jpg", class: "img-responsive")
     
   <!-- PORTFOLIO -->
   section.big-padding
@@ -128,8 +147,27 @@ header id="home"
     
     .container.scrollimation.fade-up
       #projects-container class="row"
-      
-        <!-- SINGLE PROJECT ITEM -->
+        
+        a.project-item.col-sm-6.col-md-4.col-lg-3.web
+
+        a.project-item.col-sm-6.col-md-4.col-lg-3.web
+          =image_tag "pymntos.jpg", alt: "MN Python User Group", class: "img-responsive project-image"
+          
+          .hover-title
+            h2.project-title Speaker, 2017
+            p Presenter
+        
+        a.project-item.col-sm-6.col-md-4.col-lg-3.web
+          =image_tag "d4d-logo.png", alt: "Data for Democracy", class: "img-responsive project-image" 
+          
+          .hover-title
+            h2.project-title Hackethon, 2017
+            p Participant
+        
+        a.project-item.col-sm-6.col-md-4.col-lg-3.web  
+
+
+      #projects-container class="row"
         
         a.project-item.col-sm-6.col-md-4.col-lg-3.web
           =image_tag "build-the-api-first.jpg", alt: "Build the API First", class: "img-responsive project-image"
@@ -192,6 +230,6 @@ header id="home"
               li
                 <a class="scrollto" href="#portfolio">Projects</a></li>
               li
-                <a class="scrollto" href="#contact">Contact</a></li>s
+                <a class="scrollto" href="#contact">Contact</a></li>
         
         
